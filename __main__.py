@@ -1,13 +1,9 @@
 import os
-import ssl
-import sys
 import time
 
-import numpy as np
-import pandas as pd
+# import pandas as pd
 from datetime import datetime
 from itertools import count
-from urllib.request import Request, urlopen
 
 from bs4 import BeautifulSoup
 from selenium import webdriver
@@ -64,8 +60,8 @@ def crawling_pelicana():
     # Data frame으로 만들어주기, columns = header
     # df = pd.
 
-    df = pd.DataFrame(results, columns=['name', 'address', 'sido', 'gu'])
-    df.to_csv('__results__/pelicana.csv', encoding='utf-8', mode='w', index=True)
+    # df = pd.DataFrame(results, columns=['name', 'address', 'sido', 'gu'])
+    # df.to_csv('__results__/pelicana.csv', encoding='utf-8', mode='w', index=True)
     # for t in results:
     #     print(t)
 
@@ -116,7 +112,7 @@ def crawling_nene():
 
     # 파일로 저장하기
     # Data frame으로 만들어주기, columns = header
-    df = pd.DataFrame(results, columns=['name', 'address', 'sido', 'gu'])
+    # df = pd.DataFrame(results, columns=['name', 'address', 'sido', 'gu'])
 
     # 모듈이 실행되고 있는 절대 위치 구하기
     print(os.path.abspath(__file__))
@@ -228,8 +224,8 @@ def crawling_goobne():
             break
     wd.quit()
 
-    df = pd.DataFrame(results, columns=['name', 'address', 'sido', 'gu'])
-    df.to_csv('__results__/goobne.csv', encoding='utf-8', mode='w', index=True)
+    # df = pd.DataFrame(results, columns=['name', 'address', 'sido', 'gu'])
+    # df.to_csv('__results__/goobne.csv', encoding='utf-8', mode='w', index=True)
 
 def main():
     # pelicana
